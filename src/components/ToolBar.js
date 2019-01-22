@@ -14,8 +14,8 @@ const ToolBar = (props)=> {
       <span className="badge badge">2</span>
       unread messages
     </p>
-    <a class="btn btn-danger"onClick={props.toggleCompose}>
-      <i class="fa fa-plus"></i>
+    <a className="btn btn-danger"onClick={props.toggleCompose}>
+      <i className="fa fa-plus"></i>
     </a>
 
     <button className="btn btn-default">

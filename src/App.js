@@ -17,22 +17,16 @@ class App extends Component {
       fetch('http://localhost:8082/api/messages')
       .then (response => response.json())
       .then(messages =>{
-        console.log(messages)
         this.setState
-
         ({messages : messages})
-
       })
-
     }
-  toggleCompose = () => {
 
+  toggleCompose = () => {
     this.setState ({
       showMessage: !this.state.showMessage
     })
   }
-
-
 
     handleChange = (e) => {
       this.setState({
@@ -48,7 +42,6 @@ class App extends Component {
 
     sendIt = async(e) => {
       e.preventDefault();
-      console.log('hiiii')
         const url = 'http://localhost:8082/api/messages'
         const payload = {
           subject: this.state.subjectValue,
@@ -75,7 +68,6 @@ class App extends Component {
       }
 
   toggleSelected = (id) => {
-
     const match= this.state.messages.find(msg => msg.id === id)
     match.selected = !match.selected
     this.setState ({
@@ -137,22 +129,6 @@ class App extends Component {
       }
       return newArray
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   toggleStarred = (messageId) => {
